@@ -1,5 +1,5 @@
-﻿int[] dias = [1, 2, 3, 4, 5, 6, 7];
-int[] semanas = [1, 2, 3, 4, 5];
+﻿int[] dias = { 1, 2, 3, 4, 5, 6, 7 };
+int[] semanas = {1, 2, 3, 4, 5};
 int[,] mes = new int[dias.Length, semanas.Length];
 Titulo();
 Console.WriteLine("Bienvenido. Por favor, elige una de las siguientes opciones para continuar");
@@ -425,14 +425,14 @@ void Opcion7()
     Console.WriteLine("PRONÓSTICO PARA LOS 5 DÍAS POSTERIORES.");
     Console.WriteLine();
     Console.WriteLine("Las temperaturas previstas para los 5 días posteriores al mes son las siguientes:");
-        int[] dias_post = { 1, 2, 3, 4, 5 };
-        Random random = new Random();
-        int min = (mes[2,4] - 5);
-        int max = (mes[2,4] + 5);
-        foreach (int dia in dias_post)
-        {
-            int temp_aleatoria = random.Next(min, max);
-            Console.WriteLine("Para el" + dia + "° día: temperatura de " + temp_aleatoria + "°C .");
-        }
+    int[] dias_post = { 1, 2, 3, 4, 5 };
+    Random random = new Random();
+    int min = (mes[2,4] - 5);
+    int max = (mes[2,4] + 5);
+    foreach (int dia in dias_post)
+    {
+        int temp_aleatoria = random.Next(min, max);
+        Console.WriteLine("Para el " + dia + "° día: temperatura de " + temp_aleatoria + "°C .");
+    }
     string? tecla = RegresarDirecto();
 }
